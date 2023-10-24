@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  postgresdb:
+    image: postgres:13 # Puedes cambiar esto a la versión que prefieras.
+    environment:
+      POSTGRES_DB: mediapp14
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
