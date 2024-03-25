@@ -11,10 +11,16 @@ import java.util.List;
 @RequestMapping("/pacientes")
 public class PacienteController {
 
-    @Autowired
+    
     private IPacienteService service;
+    
 
-    @GetMapping
+    public PacienteController(IPacienteService service) {
+		super();
+		this.service = service;
+	}
+
+	@GetMapping
     public List<Paciente> listar() throws Exception {
         return service.listar();
     }

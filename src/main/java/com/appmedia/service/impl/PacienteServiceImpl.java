@@ -13,7 +13,6 @@ import java.util.Optional;
 @Service
 public class PacienteServiceImpl implements IPacienteService {
 
-    @Autowired
     private IPacienteRepo repo;
 
     public PacienteServiceImpl(IPacienteRepo repo) {
